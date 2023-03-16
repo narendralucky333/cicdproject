@@ -16,16 +16,17 @@ in CLI create a yaml file inside that file write script BuildConfig and Jenkinsf
 
 
 buildconfig
----apiVersion: build.openshift.io/v1
+
+apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: example
+  name: jenkins-cicd
   namespace: java-project
 spec:
   source:
     git:
       ref: master
-      uri: 'https://github.com/openshift/ruby-ex.git'
+      uri: 'https://github.com/narendralucky333/cicdproject.git'
     type: Git
   strategy:
     jenkinsPipelineStrategy:
